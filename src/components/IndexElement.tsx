@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { CheckboxGroup } from "@components/CheckboxGroup";
 
-const jsonObjects = import.meta.glob("@public/data/**/*.json", { eager: true });
+const jsonObjects = import.meta.glob("@/content/data/**/*.json", {
+  eager: true,
+});
 const checkLists = Object.values(jsonObjects).map((json) => {
   const data = json as { default: CheckList };
   return data.default;
