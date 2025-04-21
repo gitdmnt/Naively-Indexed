@@ -28,3 +28,12 @@ pnpm-debug.log*
 
 # Supabase
 supabase/.temp
+
+#
+
+bun.lockb
+bun.lock
+.env
+.env-example
+
+package-lock.json

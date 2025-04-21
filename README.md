@@ -1,74 +1,57 @@
-# Astro Supabase Starter
+# Naively Indexed
 
-![Astro Supabase Starter Preview](astro-supabase-starter-preview.png)
+持っている知識をチェックボックスで入力し、共有するためのシステム。
 
-**View demo:** [https://astro-supabase-starter.netlify.app/](https://astro-supabase-starter.netlify.app/)
+## Usages
 
-The Astro Supabase starter demonstrates how to integrate **Supabase** into an Astro project deployed on Netlify.
+### 学ぶ前
 
-## Deploying to Netlify
+#### 学ぶ側
 
-If you click "Deploy to Netlify" button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify.
+- [x] 知っている知識全てにチェックを付ける。
+- [ ] 知識データファイルをエクスポートし、教える側に送る。
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/astro-supabase-starter&fullConfiguration=true)
+#### 教える側
 
-## Astro Commands
+- [ ] 教えたい内容にチェックを付ける。
+- [ ] 送られてきたファイル群をインポートする。
+- [ ] ハイライトされている項目(学ぶ側にとって既習である項目)のチェックを外す。
+      残った項目が教えるべき項目。
 
-All commands are run from the root of the project, from a terminal:
+### 学んだ後
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+#### 教える側
 
-## Developing Locally
+- [ ] データファイルをエクスポートし、学ぶ側に送る。
 
-| Prerequisites                                                                |
-| :--------------------------------------------------------------------------- |
-| [Node.js](https://nodejs.org/) v18.14+                                       |
-| (optional) [nvm](https://github.com/nvm-sh/nvm) for Node version management  |
-| [Netlify account](https://netlify.com/)                                      |
-| [Netlify CLI](https://docs.netlify.com/cli/get-started/).                    |
-| [Supabase account](https://supabase.com/)                                    |
+#### 学ぶ側
 
-### Set up the database
+- [ ] データファイルをインポートする。学んだ項目にチェックが付く。
 
-To use this template, you’ll need to set up and seed a new Supabase database.
+## Contribute
 
-1. Create a new Supabase project.
-2. Run the SQL commands found in the `supabase/migrations` directory in the Supabase UI.
-3. To seed the database with data, you can import the contents of the `supabase/seed.csv` file in the Supabase UI.
+### チェックリストの新設
 
-ℹ️ _Note: This template was created to be used with the Supabase extension for Netlify. If you don’t wish to use the Netlify Supabase extension, you will need to set the `SUPABASE_DATABASE_URL` and `SUPABASE_ANON_KEY` environment variables in the `.env` file._
+`public/data/<分野>/<科目>.json`というファイルを作り、中に以下のような形式で達成項目を記述する。
 
-### Install and run locally
-
-1. Clone this repository, then run `npm install` in its root directory.
-
-2. For the starter to have full functionality locally, please ensure you have an up-to-date version of Netlify CLI. Run:
-
-```
-npm install netlify-cli@latest -g
+```json:public/data/mathematics/elementaryAnalysis.json
+[
+  {
+    "id": "differentiation_of_polynomials",
+    "label_en": "Differentiation of Polynomials",
+    "label_ja": "多項式の微分"
+  },
+  {
+    "id": "differentiation_of_trigonometric_functions",
+    "label_en": "Differentiation of Trigonometric Functions",
+    "label_ja": "三角関数の微分"
+  }
+]
 ```
 
-3. Link your local repository to the deployed Netlify site. This will ensure you're using the same runtime version for both local development and your deployed site.
+達成項目は、原則として以下にあてはまるものとする。
 
-```
-netlify link
-```
+- 科目の達成進度を把握する上で有用なもの。
+- 教科書、参考書などで、見出しとなりうるもの。
+- 有名な値や概念、方程式の定義。
 
-4. Then, run the Astro.js development server via Netlify CLI:
-
-```
-netlify dev --target-port 4321
-```
-
-If your browser doesn't navigate to the site automatically, visit [localhost:8888](http://localhost:8888).
-
-## Support
-
-If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).

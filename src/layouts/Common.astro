@@ -1,13 +1,14 @@
 ---
-import "../../src/styles/globals.css";
-import Footer from "./Footer.astro";
-import Header from "./Header.astro";
+import "@styles/globals.css";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
 
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+const pageTitle = title + (title ? " - " : "") + "Naively Indexed";
 ---
 
 <!doctype html>
@@ -15,9 +16,11 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
+    <title>{pageTitle}</title>
   </head>
-  <body class="px-4 antialiased bg-neutral-800 sm:px-8 text-white">
+  <body
+    class="px-4 antialiased bg-neutral-100 sm:px-8 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100"
+  >
     <Header />
     <main class="w-full max-w-4xl mx-auto grow">
       <slot />
