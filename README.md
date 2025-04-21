@@ -57,19 +57,6 @@
     }
   ]
 }
-
-[
-  {
-    "id": "differentiation_of_polynomials",
-    "label_en": "Differentiation of Polynomials",
-    "label_ja": "多項式の微分"
-  },
-  {
-    "id": "differentiation_of_trigonometric_functions",
-    "label_en": "Differentiation of Trigonometric Functions",
-    "label_ja": "三角関数の微分"
-  }
-]
 ```
 
 達成項目は、原則として以下にあてはまるものとする。
