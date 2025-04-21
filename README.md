@@ -1,4 +1,4 @@
-# Naively Indexed
+# [Naively Indexed](https://naively-indexed.netlify.app/ )
 
 持っている知識をチェックボックスで入力し、共有するためのシステム。
 
