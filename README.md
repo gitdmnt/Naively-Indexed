@@ -35,6 +35,29 @@
 `public/data/<分野>/<科目>.json`というファイルを作り、中に以下のような形式で達成項目を記述する。
 
 ```json:public/data/mathematics/elementaryAnalysis.json
+{
+  "title": {
+    "en": "Elementary Analysis",
+    "ja": "初等解析"
+  },
+  "items": [
+    {
+      "id": "differentiation_of_polynomials",
+      "label": {
+        "en": "Differentiation of Polynomials",
+        "ja": "多項式の微分"
+      }
+    },
+    {
+      "id": "differentiation_of_trigonometric_functions",
+      "label": {
+        "en": "Differentiation of Trigonometric Functions",
+        "ja": "三角関数の微分"
+      }
+    }
+  ]
+}
+
 [
   {
     "id": "differentiation_of_polynomials",

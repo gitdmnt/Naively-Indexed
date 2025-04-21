@@ -1,8 +1,23 @@
-[
-  {
-    "id": "differentiation_of_polynomials",
-    "label_en": "Differentiation of Polynomials",
-    "label_ja": "多項式の微分"
-  }
-]
+{
+  "title": {
+    "en": "Elementary Analysis",
+    "ja": "初等解析"
+  },
+  "items": [
+    {
+      "id": "differentiation_of_polynomials",
+      "label": {
+        "en": "Differentiation of Polynomials",
+        "ja": "多項式の微分"
+      }
+    },
+    {
+      "id": "differentiation_of_trigonometric_functions",
+      "label": {
+        "en": "Differentiation of Trigonometric Functions",
+        "ja": "三角関数の微分"
+      }
+    }
+  ]
+}
 

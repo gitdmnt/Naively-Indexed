@@ -1,19 +1,11 @@
 import { useEffect, useState } from "react";
-import { Checkbox } from "@components/Checkbox";
+import { CheckboxGroup } from "@components/CheckboxGroup";
 
 const jsonObjects = import.meta.glob("@public/data/**/*.json", { eager: true });
-const checkLists: CheckList[] = Object.values(jsonObjects).map((json) => {
+const checkLists = Object.values(jsonObjects).map((json) => {
   const data = json as { default: CheckList };
   return data.default;
 });
-
-type CheckList = CheckListItem[];
-
-interface CheckListItem {
-  id: string;
-  label_en: string;
-  label_ja: string;
-}
 
 const CHECKLIST_KEY = "selectedCheckList";
 
@@ -45,17 +37,14 @@ export const IndexElement = () => {
 
   return (
     <div>
-      {checkLists.map((list: CheckList) =>
-        list.map((item) => (
-          <Checkbox
-            key={item.id}
-            id={item.id}
-            label={item.label_ja}
-            checked={selected[item.id] ?? false}
-            onChange={(checked) => handleCheckboxChange(checked, item)}
-          />
-        ))
-      )}
+      {checkLists.map((list) => (
+        <CheckboxGroup
+          key={list.title.en}
+          list={list}
+          selected={selected}
+          onChange={handleCheckboxChange}
+        />
+      ))}
     </div>
   );
 };
