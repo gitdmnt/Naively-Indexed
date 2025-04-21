@@ -32,9 +32,9 @@
 
 ### チェックリストの新設
 
-`public/data/<分野>/<科目>.json`というファイルを作り、中に以下のような形式で達成項目を記述する。
+`src/content/data/<分野>/<科目>.json`というファイルを作り、中に以下のような形式で達成項目を記述する。
 
-```json:public/data/mathematics/elementaryAnalysis.json
+```json:src/content/data/mathematics/elementaryAnalysis.json
 {
   "title": {
     "en": "Elementary Analysis",

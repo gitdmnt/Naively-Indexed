@@ -1,5 +1,5 @@
 ---
-import Layout from "../../components/Layout.astro";
+import Layout from "@layouts/Common.astro";
 import { supabase } from "../../utils/database";
 
 export const prerender = false;
@@ -55,7 +55,11 @@ if (supabase) {
         }.
       </p>
 
-      <button type="submit" class="px-4 py-2 bg-green-500 rounded-sm text-neutral-800 hover:bg-green-600">Give {framework?.name} your vote &starf;</button>
+      <button
+        type="submit"
+        class="px-4 py-2 bg-green-500 rounded-sm text-neutral-800 hover:bg-green-600"
+        >Give {framework?.name} your vote &starf;</button
+      >
     </form>
   </article>
 </Layout>
