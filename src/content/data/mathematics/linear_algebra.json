@@ -1,0 +1,22 @@
+{
+  "title": {
+    "en": "Linear Algebra",
+    "ja": "線形代数"
+  },
+  "items": [
+    {
+      "id": "fundamental_theorem_on_homomorphisms",
+      "label": {
+        "en": "Fundamental Theorem on Homomorphisms",
+        "ja": "準同型定理"
+      }
+    },
+    {
+      "id": "cayley_hamilton_theorem",
+      "label": {
+        "en": "Cayley–Hamilton Theorem",
+        "ja": "ケーリー・ハミルトンの定理"
+      }
+    }
+  ]
+}
