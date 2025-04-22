@@ -5,6 +5,13 @@
   },
   "items": [
     {
+        "id": "def_matrix",
+        "label": {
+            "en": "Definition of Matrix",
+            "ja": "行列の定義",
+        }
+    },
+    {
       "id": "fundamental_theorem_on_homomorphisms",
       "label": {
         "en": "Fundamental Theorem on Homomorphisms",
